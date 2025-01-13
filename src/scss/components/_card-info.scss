@@ -1,0 +1,23 @@
+.card-info {
+  // justify-content: center;
+  text-align: justify;
+  padding-bottom: 16px;
+    .avatar-large {
+      max-width: none;
+      width: 104px;
+    }
+    .avatar-image{
+      text-align: center;
+    }
+    .img-right {
+      margin-left: 16px;
+      align-self: center;
+        img {
+          width: 1000px;
+          height: 360px;
+          object-fit: cover;
+          object-position: 50% 42%;
+        }
+
+    }
+}
