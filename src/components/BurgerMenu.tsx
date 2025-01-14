@@ -1,55 +1,45 @@
+import Burger from 'hamburger-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { DropdownMenu } from './DropdownMenu';
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen((prev) => {
-      return !prev;
-    });
-    console.log('🚀 ~ toggleDropdown ~ isOpen:', isOpen);
-  };
-
   return (
-    <div className='btn-group'>
+    <>
       <button
+        role='button'
         type='button'
-        className='list-group-item'
-        onClick={toggleDropdown}
-        aria-haspopup='true'
-        aria-expanded={isOpen}
+        className='btn'
+        data-toggle='dropdown'
+        id='dropdownMenuButton'
       >
-        <div className='nav-icon'>
-          <div className='burger-menu' />
-        </div>
+        <Burger toggled={isOpen} toggle={setIsOpen} label='burger button' />
+        {/* <button
+        className='btn btn-secondary dropdown-toggle'
+        type='button'
+        id='dropdownMenuButton'
+        data-toggle='dropdown'
+        aria-haspopup='true'
+        aria-expanded='false'
+      >
+        Dropdown button
       </button>
-      {isOpen && (
-        <div className='dropdown-menu'>
-          <p>toto</p>
-          <p>toto2</p>
-          <p>toto3</p>
-          <Link
-            to='/#hatha'
-            className='btn btn-flat list-group-item btn-navbar'
-          >
-            Hatha Yoga
-          </Link>
-          <Link
-            to='/#about-me'
-            className='btn btn-flat list-group-item btn-navbar'
-          >
-            About me
-          </Link>
-          <Link
-            to='/#tarifs'
-            className='btn btn-flat list-group-item btn-navbar'
-          >
-            Tarifs
-          </Link>
-        </div>
-      )}
-    </div>
+      <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+        <a className='dropdown-item' href='#'>
+          Action
+        </a>
+        <a className='dropdown-item' href='#'>
+          Another action
+        </a>
+        <a className='dropdown-item' href='#'>
+          Something else here
+        </a>
+      </div> */}
+      </button>
+      {isOpen && <DropdownMenu ariaLabelledBy={dropdownMenuButton} />}
+      {console.log('🚀 ~ BurgerMenu ~ isOpen:', isOpen)}{' '}
+    </>
   );
 };
 

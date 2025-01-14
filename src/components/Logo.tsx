@@ -3,7 +3,6 @@ import l3 from '../assets/images/l3.svg';
 
 const Logo: FC = () => {
   return (
-    // <div className='moving-letters flex-start'>
     <div className='moving-letters flex-start'>
       <a href='/' className='link'>
         <h1>
