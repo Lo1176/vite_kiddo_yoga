@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const DropdownMenu = () => {
+const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => {
+      return !prev;
+    });
+    console.log('🚀 ~ toggleDropdown ~ isOpen:', isOpen);
   };
 
   return (
@@ -23,6 +26,9 @@ const DropdownMenu = () => {
       </button>
       {isOpen && (
         <div className='dropdown-menu'>
+          <p>toto</p>
+          <p>toto2</p>
+          <p>toto3</p>
           <Link
             to='/#hatha'
             className='btn btn-flat list-group-item btn-navbar'
@@ -47,4 +53,4 @@ const DropdownMenu = () => {
   );
 };
 
-export default DropdownMenu;
+export default BurgerMenu;
