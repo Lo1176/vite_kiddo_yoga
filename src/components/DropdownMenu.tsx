@@ -15,15 +15,10 @@ export const DropdownMenu: FC<DropdownMenuProps> = ({
       className={`dropdown-menu ${isOpen ? 'show' : ''}`}
       aria-labelledby={ariaLabelledBy}
     >
-      <Link to='/#hatha' className='btn btn-flat list-group-item btn-navbar'>
-        Hatha Yoga
-      </Link>
-      <Link to='/#about-me' className='btn btn-flat list-group-item btn-navbar'>
-        About me
-      </Link>
-      <Link to='/#tarifs' className='btn btn-flat list-group-item btn-navbar'>
-        Tarifs
-      </Link>
+      <div className='dropdown-divider'></div>
+      <Link to='/#hatha'>Hatha Yoga</Link>
+      <Link to='/#about-me'>About me</Link>
+      <Link to='/#tarifs'>Tarifs</Link>
     </div>
   );
 };
