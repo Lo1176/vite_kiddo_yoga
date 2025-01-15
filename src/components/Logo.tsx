@@ -3,9 +3,8 @@ import l3 from '../assets/images/l3.svg';
 
 const Logo: FC = () => {
   return (
-    // <div className='moving-letters flex-start'>
     <div className='moving-letters flex-start'>
-      <a href='/' className='link'>
+      <div className='link'>
         <h1>
           <span className='text-wrapper'>
             <span className='line line1'></span>
@@ -17,7 +16,7 @@ const Logo: FC = () => {
             <span className='line line2'></span>
           </span>
         </h1>
-      </a>
+      </div>
     </div>
   );
 };
