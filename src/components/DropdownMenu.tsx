@@ -3,11 +3,18 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 interface DropdownMenuProps {
   ariaLabelledBy: string;
+  isOpen: boolean;
 }
 
-export const DropdownMenu: FC<DropdownMenuProps> = ({ ariaLabelledBy }) => {
+export const DropdownMenu: FC<DropdownMenuProps> = ({
+  ariaLabelledBy,
+  isOpen,
+}) => {
   return (
-    <div className='dropdown-menu' aria-labelledby={ariaLabelledBy}>
+    <div
+      className={`dropdown-menu ${isOpen ? 'show' : ''}`}
+      aria-labelledby={ariaLabelledBy}
+    >
       <Link to='/#hatha' className='btn btn-flat list-group-item btn-navbar'>
         Hatha Yoga
       </Link>

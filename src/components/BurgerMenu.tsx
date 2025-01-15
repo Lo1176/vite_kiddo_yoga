@@ -37,7 +37,9 @@ const BurgerMenu = () => {
         </a>
       </div> */}
       </button>
-      {isOpen && <DropdownMenu ariaLabelledBy={dropdownMenuButton} />}
+      {isOpen && (
+        <DropdownMenu isOpen={isOpen} ariaLabelledBy={dropdownMenuButton} />
+      )}
       {console.log('🚀 ~ BurgerMenu ~ isOpen:', isOpen)}{' '}
     </>
   );
